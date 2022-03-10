@@ -41,6 +41,22 @@ li a{
     font-size: 0.9rem;
     padding: 0 15px;
     cursor: pointer;
+    position: relative;
+}
+
+.nav-desktop-list li a:after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 25%;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-desktop-list li a:hover:after{
+    width: 50%;
 }
 
 .nav-mobile-container{
@@ -66,8 +82,19 @@ li a{
     transition: 0.3s;
 }
 
-.nav-mobile-list li a:hover{
-    color: rgba(0, 0, 0, 0.356);
+.nav-mobile-list li a:after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 25%;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-mobile-list li a:hover:after{
+    width: 50%;
 }
 
 .close-hamburger-menu{
